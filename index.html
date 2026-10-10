@@ -5,138 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stefano Fiscale</title>
     
-    <!-- Importazione di un font Serif simile a quello usato da Overleaf -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap');
-        
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff; /* Sfondo bianco richiesto */
-            color: #333;
-            font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
-            line-height: 1.6;
-        }
-        
-        /* Barra di navigazione superiore */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2.5rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: #111;
-        }
-        nav {
-            display: flex;
-            gap: 1.8rem;
-            flex-wrap: wrap;
-        }
-        nav a {
-            text-decoration: none;
-            color: #999;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-        nav a:hover, nav a.active {
-            color: #111;
-            border-bottom: 2px solid #111;
-            padding-bottom: 3px;
-        }
-
-        /* Layout principale a due colonne */
-        main {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 1100px;
-            margin: 3rem auto;
-            padding: 0 5%;
-            gap: 4rem;
-        }
-        
-        /* Colonna Sinistra (Immagine) */
-        .sidebar {
-            flex: 1;
-            min-width: 280px;
-            max-width: 350px;
-        }
-        .sidebar img {
-            width: 100%;
-            border-radius: 8px;
-            object-fit: cover;
-        }
-        
-        /* Colonna Destra (Testo) */
-        .content {
-            flex: 2;
-            min-width: 320px;
-        }
-        .content h1 {
-            font-size: 4rem;
-            font-weight: 400;
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-            color: #111;
-        }
-        .content p {
-            margin-bottom: 1.5rem;
-            font-size: 1.15rem;
-            color: #444;
-            text-align: left;
-        }
-        .content a {
-            color: #555;
-            text-decoration: none;
-            border-bottom: 1px solid #999;
-        }
-        .content a:hover {
-            color: #111;
-            border-bottom-color: #111;
-        }
-        
-        /* Link di contatto stile footer */
-        .social-links {
-            margin-top: 3rem;
-            display: flex;
-            gap: 1.5rem;
-            font-size: 1rem;
-        }
-        .social-links a {
-            border: none;
-            color: #666;
-        }
-        .social-links a:hover {
-            color: #111;
-            text-decoration: underline;
-        }
-
-        /* Responsività per schermi piccoli */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1.5rem;
-            }
-            main {
-                flex-direction: column;
-            }
-        }
-    </style>
+	<link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
 
     <header>
         <a href="index.html" class="logo">Stefano Fiscale</a>
         <nav>
-            <!-- Sezioni richieste nei vincoli -->
+            
             <a href="index.html" class="active">About</a>
             <a href="cv.html">CV/Contacts</a>
             <a href="research.html">Research</a>
