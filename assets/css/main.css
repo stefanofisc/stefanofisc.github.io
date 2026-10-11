@@ -74,7 +74,7 @@ main {
 	font-size: 4rem;
 	font-weight: 400;
 	margin-top: 0;
-	margin-bottom: 1.5rem;
+	margin-bottom: 2.5rem; /* Aumentato lo spazio sotto al titolo principale */
 	color: #111;
 }
 .content p {
@@ -109,9 +109,35 @@ main {
 	text-decoration: underline;
 }
 
-.vertical-space-header-content {
-    margin-bottom: 24px; /* Crea uno spazio di 24px sotto al paragrafo */
-  }
+/* --- Nuovi stili per la pagina CV/Contatti --- */
+.contact-heading {
+    font-weight: 600;
+    color: #111;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.contact-email {
+    color: #111;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s ease;
+}
+
+.contact-email:hover {
+    color: #000;
+    text-decoration-color: #000;
+}
 
 /* Responsività per schermi piccoli */
 @media (max-width: 768px) {
