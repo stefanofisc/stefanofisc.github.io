@@ -82,7 +82,7 @@ main {
 
 /* Titolo H1 per le pagine interne (ampia spaziatura come nell'immagine di riferimento) */
 .content h1.page-title {
-	margin-bottom: 12rem;
+	margin-bottom: 10rem;
 }
 
 .content p {
