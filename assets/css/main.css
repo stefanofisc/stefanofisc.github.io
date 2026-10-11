@@ -109,6 +109,10 @@ main {
 	text-decoration: underline;
 }
 
+.vertical-space-header-content {
+    margin-bottom: 24px; /* Crea uno spazio di 24px sotto al paragrafo */
+  }
+
 /* Responsività per schermi piccoli */
 @media (max-width: 768px) {
 	header {
