@@ -43,7 +43,7 @@ nav a:hover, nav a.active {
 	padding-bottom: 3px;
 }
 
-/* Layout principale a due colonne */
+/* Layout principale */
 main {
 	display: flex;
 	flex-wrap: wrap;
@@ -53,7 +53,7 @@ main {
 	gap: 4rem;
 }
 
-/* Colonna Sinistra (Immagine) */
+/* Colonna Sinistra (Immagine profilo homepage) */
 .sidebar {
 	flex: 1;
 	min-width: 280px;
@@ -65,18 +65,26 @@ main {
 	object-fit: cover;
 }
 
-/* Colonna Destra (Testo) */
+/* Colonna Destra / Contenuto */
 .content {
 	flex: 2;
 	min-width: 320px;
 }
+
+/* Titolo H1 predefinito (per la homepage: resta compatto a 1.5rem) */
 .content h1 {
 	font-size: 4rem;
 	font-weight: 400;
 	margin-top: 0;
-	margin-bottom: 2.5rem; /* Aumentato lo spazio sotto al titolo principale */
+	margin-bottom: 1.5rem;
 	color: #111;
 }
+
+/* Titolo H1 per le pagine interne (ampia spaziatura come nell'immagine di riferimento) */
+.content h1.page-title {
+	margin-bottom: 6rem;
+}
+
 .content p {
 	margin-bottom: 1.5rem;
 	font-size: 1.15rem;
@@ -109,34 +117,34 @@ main {
 	text-decoration: underline;
 }
 
-/* --- Nuovi stili per la pagina CV/Contatti --- */
+/* Stili specifici per i contatti */
 .contact-heading {
-    font-weight: 600;
-    color: #111;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
+	font-weight: 600;
+	color: #111;
+	margin-top: 2rem;
+	margin-bottom: 0.5rem;
 }
 
 .contact-links {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1rem;
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1rem;
+	font-size: 1rem;
+	color: #666;
+	margin-bottom: 1.5rem;
 }
 
 .contact-email {
-    color: #111;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    transition: color 0.2s ease;
+	color: #111;
+	text-decoration: underline;
+	text-underline-offset: 4px;
+	transition: color 0.2s ease;
 }
 
 .contact-email:hover {
-    color: #000;
-    text-decoration-color: #000;
+	color: #000;
+	text-decoration-color: #000;
 }
 
 /* Responsività per schermi piccoli */
@@ -148,5 +156,9 @@ main {
 	}
 	main {
 		flex-direction: column;
+	}
+	/* Adattamento del margine su smartphone */
+	.content h1.page-title {
+		margin-bottom: 3.5rem;
 	}
 }
