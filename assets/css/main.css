@@ -43,7 +43,7 @@ nav a:hover, nav a.active {
 	padding-bottom: 3px;
 }
 
-/* Layout principale */
+/* Layout principale a due colonne */
 main {
 	display: flex;
 	flex-wrap: wrap;
@@ -53,7 +53,7 @@ main {
 	gap: 4rem;
 }
 
-/* Colonna Sinistra (Immagine profilo homepage) */
+/* Colonna Sinistra (Immagine) */
 .sidebar {
 	flex: 1;
 	min-width: 280px;
@@ -65,26 +65,18 @@ main {
 	object-fit: cover;
 }
 
-/* Colonna Destra / Contenuto */
+/* Colonna Destra (Testo) */
 .content {
 	flex: 2;
 	min-width: 320px;
 }
-
-/* Titolo H1 predefinito (per la homepage: resta compatto a 1.5rem) */
 .content h1 {
 	font-size: 4rem;
 	font-weight: 400;
 	margin-top: 0;
-	margin-bottom: 1.5rem;
+	margin-bottom: 2.5rem; /* Aumentato lo spazio sotto al titolo principale */
 	color: #111;
 }
-
-/* Titolo H1 per le pagine interne (ampia spaziatura come nell'immagine di riferimento) */
-.content h1.page-title {
-	margin-bottom: 10rem;
-}
-
 .content p {
 	margin-bottom: 1.5rem;
 	font-size: 1.15rem;
@@ -117,34 +109,34 @@ main {
 	text-decoration: underline;
 }
 
-/* Stili specifici per i contatti */
+/* --- Nuovi stili per la pagina CV/Contatti --- */
 .contact-heading {
-	font-weight: 600;
-	color: #111;
-	margin-top: 2rem;
-	margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #111;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .contact-links {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	gap: 1rem;
-	font-size: 1rem;
-	color: #666;
-	margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
 }
 
 .contact-email {
-	color: #111;
-	text-decoration: underline;
-	text-underline-offset: 4px;
-	transition: color 0.2s ease;
+    color: #111;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s ease;
 }
 
 .contact-email:hover {
-	color: #000;
-	text-decoration-color: #000;
+    color: #000;
+    text-decoration-color: #000;
 }
 
 /* Responsività per schermi piccoli */
@@ -157,8 +149,116 @@ main {
 	main {
 		flex-direction: column;
 	}
-	/* Adattamento del margine su smartphone */
-	.content h1.page-title {
-		margin-bottom: 3.5rem;
-	}
+}
+
+/* --- Nuovi stili per la pagina Research --- */
+
+/* Applica la spaziatura richiesta (6rem in alto) per simulare l'h1.page-title, e un margine in basso */
+.section-title {
+    margin-top: 6rem;
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #111;
+}
+
+/* Stile per la lista pubblicazioni (simile a Screenshot 1) */
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.pub-item {
+    display: flex;
+    gap: 2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.pub-item:hover {
+    opacity: 0.7;
+}
+
+.pub-year {
+    color: #999;
+    font-size: 1rem;
+    flex-shrink: 0;
+    width: 50px;
+    padding-top: 0.15rem;
+}
+
+.pub-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.pub-title {
+    font-weight: 600;
+    color: #111;
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+
+.pub-authors {
+    color: #777;
+    font-size: 0.95rem;
+}
+
+/* Stile e spaziatura per il pulsante Google Scholar (Screenshot 2) */
+.scholar-button-container {
+    margin-top: 11rem; /* Spaziatura esatta richiesta */
+    margin-bottom: 2rem;
+    text-align: center; /* Per centrare il pulsante se lo desideri. Rimuovi per allineare a sinistra */
+}
+
+.scholar-button {
+    display: inline-block;
+    background-color: #e5f1ff; /* Azzurro chiaro */
+    border: 1.5px solid #0b57d0; /* Bordo blu scuro */
+    color: #1f1f1f;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px; /* Effetto pillola */
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.scholar-button:hover {
+    background-color: #cce4ff; /* Scurisce leggermente al passaggio del mouse */
+    color: #1f1f1f;
+}
+
+/* Lista collaborazioni */
+.collaborations-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #444;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.collaborations-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Adattamenti per Mobile */
+@media (max-width: 768px) {
+    .section-title {
+        margin-top: 4rem; /* Leggera riduzione su mobile per non esagerare con lo spazio vuoto */
+    }
+    .scholar-button-container {
+        margin-top: 6rem;
+    }
+    .pub-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .pub-year {
+        width: auto;
+    }
 }
